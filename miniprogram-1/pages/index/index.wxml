@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+    <button bindtap="getRemoteDoc">
+      下载远端文档
+    </button>
+    <image src="https://hkcash-private-test.oss-cn-hongkong.aliyuncs.com/APP_ID_CARD/00003d65d8d62c76.jpeg?OSSAccessKeyId=LTAI2pFx7EflElP7&Expires=1570692837&Signature=FIq4tvwrbqMe%2F7yPkUiXyHf4vYA%3D"></image>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
