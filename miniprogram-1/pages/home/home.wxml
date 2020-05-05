@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view class="page">
+  <text>home</text>
+  <view class="tabNav">
+    <view
+      wx:for="{{tabs}}"
+      wx:key="index"
+      data-idx="{{index}}"
+      bindtap="currentTab"
+      class="{{currentTab==index ? 'cur' : ''}}"
+    >
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>
